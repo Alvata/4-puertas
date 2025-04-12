@@ -1,24 +1,27 @@
+<!DOCTYPE html>
 <html>
   <head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escenario Propio</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Escenario Propio Claudia</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   </head>
-
-<body>
+  
+  <body>
     <a-scene>
-        <a-camera position="0 -7 -1"></a-camera>
-        <a-light type="directional" position="1 1 1" intensity="1"></a-light>
-        <a-entity 
-            gltf-model="https://github.com/Alvata/4-puertas/blob/main/Puertas.glb" 
-            position="0 -16 -1"
-            scale="1 1 1">
-        </a-entity>
-        <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
-</body>
+      <a-entity light="type: ambient; intensity: 0.5"></a-entity>
+      <a-entity light="type: directional; intensity: 1" position="1 1 0.5"></a-entity>
+      <a-camera position="0 1.6 3"></a-camera>
 
-  
-  
+      <!-- IMAGEN -->
+      <a-entity 
+        gltf-model="https://raw.githubusercontent.com/Alvata/4-puertas/main/Puertas.glb"
+        position="0 0 -2"
+        scale="1 1 1"
+        rotation="0 0 0">
+      </a-entity>
+      
+
+    </a-scene>
+  </body>
 </html>
+
