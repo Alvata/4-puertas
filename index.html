@@ -1,33 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Escenario Propio Claudia</title>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-  </head>
-  
-  <body>
-    <a-scene>
-      <a-entity light="type: ambient; intensity: 0.5"></a-entity>
-      <a-entity light="type: directional; intensity: 1" position="1 1 0.5"></a-entity>
-      <a-camera position="0 1.6 3"></a-camera>
-
-      <!-- IMAGEN -->
-      <a-entity 
-        gltf-model="https://raw.githubusercontent.com/Alvata/4-puertas/main/Puertas.glb"
-        position="0 0 -2"
-        scale="1 1 1"
-        rotation="0 0 0">
-      </a-entity>
-      
-      <a-plane rotation="-90 0 0" width="10" height="10" color="#ccc"></a-plane>
-    </a-scene>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html>
-  <head>
     <title>Escenario Propio Claudia</title>
     <meta name="description" content="Hello, WebVR! A-Frame">
     <!-- Con este script se importa la librería A-Frame -->
@@ -42,8 +15,6 @@
 
     <!-- Crear la escena de A-Frame -->
     <a-scene>
-      <a-sky ="#a2d2ff"></a-sky>
-
       <!-- Agregar el modelo GLB a la escena -->
       <a-entity 
         gltf-model="#puertaGLB"
@@ -51,12 +22,14 @@
         scale="1 1 1"
         rotation="0 0 0">
       </a-entity>
-
-      <!-- Luz  -->
-      <a-entity light="type: ambient; intensity: 0.8"></a-entity>
-      <a-entity light="type: directional; intensity: 1" position="1 1 0.5"></a-entity>
+      
       <!-- Cámara con controles para moverse en la escena -->
       <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+       <!-- Luz  -->
+      <a-entity light="type: ambient; intensity: 0.8"></a-entity>
+      <a-entity light="type: directional; intensity: 1" position="1 1 0.5"></a-entity>
+      <a-sky ="#a2d2ff"></a-sky>
     </a-scene>
   </body>
 </html>
