@@ -25,3 +25,40 @@
   </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Escenario Propio Claudia</title>
+    <meta name="description" content="Hello, WebVR! A-Frame">
+    <!-- Con este script se importa la librería A-Frame -->
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+  
+    <a-assets>
+    <!-- Modelo 3D GLB -->
+      <a-asset-item id="puertaGLB" src="https://raw.githubusercontent.com/Alvata/4-puertas/main/Puertas.glb"></a-asset-item>
+    </a-assets>
+
+    <!-- Crear la escena de A-Frame -->
+    <a-scene>
+      <a-sky ="#a2d2ff"></a-sky>
+
+      <!-- Agregar el modelo GLB a la escena -->
+      <a-entity 
+        gltf-model="#puertaGLB"
+        position="0 0 -3"
+        scale="1 1 1"
+        rotation="0 0 0">
+      </a-entity>
+
+      <!-- Luz  -->
+      <a-entity light="type: ambient; intensity: 0.8"></a-entity>
+      <a-entity light="type: directional; intensity: 1" position="1 1 0.5"></a-entity>
+      <!-- Cámara con controles para moverse en la escena -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
+
+
